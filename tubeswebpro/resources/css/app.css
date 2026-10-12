@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-modern: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --glow-effect: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--primary-gradient);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.app-navbar,
+.navbar {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-modern);
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #fff;
+}
+
+.glass-card,
+.status-card,
+.card,
+.list-group-item,
+.table,
+#reportForm {
+    border-radius: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-modern);
+}
+
+.status-card,
+.card,
+.list-group-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.status-card:hover,
+.card:hover,
+.list-group-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--glow-effect);
+}
+
+.page-section {
+    padding: 2rem 0 4rem;
+}
+
+#reportForm {
+    padding: 28px;
+}
+
+#map,
+#cameraStream {
+    border-radius: 20px;
+    box-shadow: var(--shadow-modern);
+    border: 1px solid var(--glass-border);
+}
+
+.pagination {
+    --bs-pagination-bg: rgba(255, 255, 255, 0.1);
+    --bs-pagination-border-color: rgba(255, 255, 255, 0.2);
+    --bs-pagination-color: #fff;
+    --bs-pagination-hover-bg: rgba(255, 255, 255, 0.2);
+    --bs-pagination-hover-color: #fff;
+    --bs-pagination-active-bg: rgba(255, 255, 255, 0.3);
+    --bs-pagination-active-border-color: rgba(255, 255, 255, 0.35);
+}
+
+.form-control,
+.form-select {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
